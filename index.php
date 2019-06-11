@@ -8,7 +8,6 @@ $result = $conn->query($sql);
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,6 +19,14 @@ $result = $conn->query($sql);
 
 
 <body>
+<table>
+    <thead>
     
+    </thead>
+    <tbody>
+    
+    </tbody>
+    </table>
+
 </body>
 </html>
