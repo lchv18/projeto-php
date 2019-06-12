@@ -4,11 +4,11 @@ include 'conn.php';
 $sql = "SELECT * From BANDAS";
 
 $result = $conn->query($sql);
-
 ?>
 
 
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -17,16 +17,25 @@ $result = $conn->query($sql);
     <title>Document</title>
 </head>
 
-
 <body>
-<table>
+<table border=1>
     <thead>
-    
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Data Cadastro</th>
+        <th></th>
+        <th></th>
     </thead>
-    <tbody>
-    
-    </tbody>
-    </table>
 
+<?php while($dados = $result->fetch_assoc()){ ?>
+
+    <tbody>
+    <td><?php echo $dados['ID_BANDAS']; ?></td>
+        <td><?php echo "<a href='http://localhost/projPHP/projeto-php/alterar.php'>Alterar</a>"; ?></td>
+        <td><?php echo "<a href='http://localhost/projPHP/projeto-php/excluir.php'>Excluir</a>"; ?></td>
+    </tbody>
+    <?php } ?>
+
+</table>
 </body>
 </html>
